@@ -33,21 +33,21 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        "service_ilikma5",
+        "template_fg1hiay",
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Mouaad Idoufkir",  // Your name
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "mouaadidoufkir07@gmail.com",  // Your email
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        "Tn1vpA9IbXRzfQdr-"
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          document.getElementById("TNX").classList.remove('hidden')
 
           setForm({
             name: "",
@@ -59,15 +59,13 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Ohh, something went wrong. Please try again.");
         }
       );
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
@@ -120,6 +118,9 @@ const Contact = () => {
           >
             {loading ? "Sending..." : "Send"}
           </button>
+          <p id="TNX" className="green-text-gradient hidden">
+          Thank you. I will get back to you as soon as possible.
+          </p>
         </form>
       </motion.div>
 

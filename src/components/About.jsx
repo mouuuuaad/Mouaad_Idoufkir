@@ -44,15 +44,30 @@ const About = () => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
-      </motion.p>
+  variants={fadeIn("", "", 0.1, 1)}
+  className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+>
+  I'm a skilled web developer with expertise in both front-end and back-end technologies, using 
+  <span style={{ color: "#45ABF0" }}> Next.js</span>, 
+  <span style={{ color: "#45ABF0" }}> React</span>, and 
+  <span style={{ color: "#45ABF0" }}>Tailwind CSS</span> to build modern and user-focused web interfaces. 
+  Additionally, I have extensive experience in back-end development using the 
+  <span style={{ color: "#27CA84" }}> MERN Stack</span> ( 
+  <span style={{ color: "#27CA84" }}> MongoDB</span>, 
+  <span style={{ color: "#27CA84" }}> Express.js</span>, 
+  <span style={{ color: "#45ABF0" }}> React</span>, and 
+  <span style={{ color: "#27CA84" }}> Node.js</span>), 
+  enabling me to create full-stack, efficient, and scalable applications. 
+  As a UI/UX designer, I also focus on providing attractive, interactive user experiences. 
+  I'm driven by my passion for exploring fields like 
+  <span style={{ color: "#F64175" }}> Artificial Intelligence </span> 
+  and 
+  <span style={{ color: "#F64175" }}> Advanced Physics</span>. 
+  I'm a fast learner, eager to work on innovative projects and collaborate to deliver professional solutions that meet client needs. 
+  Together, we can create impactful and cutting-edge applications!
+</motion.p>
+
+
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
